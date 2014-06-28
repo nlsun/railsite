@@ -39,4 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Heroku integration
-gem 'rails_12factor', group: :production
+#gem 'rails_12factor', group: :production
