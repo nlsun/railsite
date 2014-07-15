@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: railsite_production
-  username: railsite
+  username: <%= ENV['RAILSITE_DATABASE_USERNAME'] %>
   password: <%= ENV['RAILSITE_DATABASE_PASSWORD'] %>
