@@ -81,5 +81,6 @@ test:
 production:
   <<: *default
   database: railsite_production
+  host: localhost
   username: <%= ENV['RAILSITE_DATABASE_USERNAME'] %>
   password: <%= ENV['RAILSITE_DATABASE_PASSWORD'] %>
