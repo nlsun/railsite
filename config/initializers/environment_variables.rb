@@ -6,11 +6,6 @@ module EnvironmentvariablesExample
       if File.exists?(env_file)
         YAML.load_file(env_file)[Rails.env].each do |key, value|
           ENV[key.to_s] = value
-          puts 'HELLO'
-          puts 'key'
-          puts key
-          puts 'value'
-          puts value
         end # end YAML.load_file
       end # end if File.exists?
     end # end config.before_configuration
