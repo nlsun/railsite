@@ -4,9 +4,11 @@ module EnvironmentvariablesExample
       env_file = Rails.root.join("config", 'environment_variables.yml').to_s
 
       if File.exists?(env_file)
-        YAML.load_file(env_file)[Rails.env].each do |key, value|
-          ENV[key.to_s] = value
-        end # end YAML.load_file
+        unless YAML.load_file(env_file)[Rails.env].empty?
+          YAML.load_file(env_file)[Rails.env].each do |key, value|
+            ENV[key.to_s] = value
+          end # end YAML.load_file
+        end
       end # end if File.exists?
     end # end config.before_configuration
   end # end class
